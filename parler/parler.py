@@ -33,12 +33,14 @@ from parler.wallet_general import WalletGeneralAPI
 from parler.wallet import WalletAPI
 import requests
 
+
 class Parler:
     '''
     the api is accessible at api.parler.com and par.pw.
     staging api = api.speak-free.com
     mst and jst cookie are same as on web
     '''
+
     def __init__(self, mst=None, jst=None, root_url="https://api.parler.com"):
         session = requests.Session()
         session.headers['User-Agent'] = 'Parler%20Staging/545 CFNetwork/978.0.7 Darwin 18.7.0'

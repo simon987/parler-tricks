@@ -4,13 +4,15 @@ class PromoterCampaignManagementAPI:
         self.s = session
 
     def approve_promoter_campaign(self, campaign, *args, **kwargs):
-        return self.s.post("{}/v3/promotionNetwork/promoter/campaign/{}".format(self.root_url, campaign), *args, **kwargs)
+        return self.s.post("{}/v3/promotionNetwork/promoter/campaign/{}".format(self.root_url, campaign), *args,
+                           **kwargs)
 
     def get_current_status_of_promotion(self, *args, **kwargs):
         return self.s.get("{}/v3/promotionNetwork/promoter".format(self.root_url), *args, **kwargs)
 
     def get_details_for_campaign(self, campaign, *args, **kwargs):
-        return self.s.get("{}/v3/promotionNetwork/promoter/campaign/{}".format(self.root_url, campaign), *args, **kwargs)
+        return self.s.get("{}/v3/promotionNetwork/promoter/campaign/{}".format(self.root_url, campaign), *args,
+                          **kwargs)
 
     def get_list_of_campaigns(self, *args, **kwargs):
         return self.s.get("{}/v3/promotionNetwork/promoter/campaigns".format(self.root_url), *args, **kwargs)

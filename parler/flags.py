@@ -6,4 +6,3 @@ class FlagsAPI:
     def get_flags_for(self, userUuid, *args, **kwargs):
         # i have no idea what this is
         return self.s.get("{}/v3/flags/user/uuid/{}".format(self.root_url, userUuid), *args, **kwargs)
- 

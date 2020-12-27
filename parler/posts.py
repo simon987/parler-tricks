@@ -15,7 +15,6 @@ class PostsAPI:
     def get_posts_using_urls(self, *args, **kwargs):
         return self.s.post("{}/v1/wordpress/posts".format(self.root_url), *args, **kwargs)
 
-    
     def get_post_impressions_over_time(self, post, *args, **kwargs):
         return self.s.get("{}/v1/post/{}/impressions/time".format(self.root_url, post), *args, **kwargs)
 

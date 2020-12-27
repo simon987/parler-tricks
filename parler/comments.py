@@ -1,4 +1,3 @@
-
 class CommentsAPI:
     def __init__(self, session, root_url="http://api.parler.com"):
         self.root_url = root_url
@@ -10,7 +9,7 @@ class CommentsAPI:
 
     # id
     def delete_comment(self, _id, *args, **kwargs):
-        return self.s.delete("{}/v1/comment".format(self.root_url), params={'id': _id} *args, **kwargs)
+        return self.s.delete("{}/v1/comment".format(self.root_url), params={'id': _id} * args, **kwargs)
 
     # id, up
     def downvote_comment(self, *args, **kwargs):

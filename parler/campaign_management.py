@@ -1,4 +1,3 @@
-
 class CampaignManagementAPI:
     def __init__(self, session, root_url="http://api.parler.com"):
         self.root_url = root_url
@@ -23,4 +22,5 @@ class CampaignManagementAPI:
         return self.s.post("{}/v3/promotionNetwork/campaign".format(self.root_url), *args, *kwargs)
 
     def submit_campaign(self, identifier, *args, **kwargs):
-        return self.s.post("{}/v3/promotionNetwork/campaign/{}/submit".format(self.root_url, identifier), *args, *kwargs)
+        return self.s.post("{}/v3/promotionNetwork/campaign/{}/submit".format(self.root_url, identifier), *args,
+                           *kwargs)

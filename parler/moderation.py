@@ -51,7 +51,7 @@ class ModerationAPI:
     # organization, startkey
     def get_pending_comments(self, *args, **kwargs):
         return self.s.get("{}/v1/moderation/pending".format(self.root_url), *args, **kwargs)
-    
+
     # organization, startkey
     def get_spam_comments(self, *args, **kwargs):
         return self.s.get("{}/v1/moderation/spam".format(self.root_url), *args, **kwargs)
@@ -89,7 +89,7 @@ class ModerationAPI:
     def post_iaa_report(self, *args, **kwargs):
         return self.s.post("{}/v2/iaa/moderation/report".format(self.root_url), *args, **kwargs)
 
-    # words, action, organization 
+    # words, action, organization
     def delete_word_filter(self, *args, **kwargs):
         return self.s.post("{}/v1/moderation/filter/word/delete".format(self.root_url), *args, **kwargs)
 
